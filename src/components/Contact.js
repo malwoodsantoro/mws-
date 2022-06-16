@@ -1,38 +1,67 @@
-import React from "react";
-import contactImg from '../assets/contact.png'
-export default function Contact() {
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import contactImg from "../assets/contact.png"
+import { CodeIcon } from '@heroicons/react/outline'
+import { UserIcon } from '@heroicons/react/solid'
 
+function Contact() {
+  const [state, handleSubmit] = useForm("xzbowyrd");
+  if (state.succeeded) {
+    return <p>I look forward to speaking with you!</p>;
+  }
   return (
-    <div className="bg-green-200 grid md:grid-cols-2 mt-[12%] m-auto">
-      <form className="form rounded-lg bg-green-200 p-4 flex flex-col">
-        <label htmlFor="name" className="text-sm text-gray-600 mx-4">
-          {" "}
-          Your Name
-        </label>
-        <input
-          type="text"
-          className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-          name="name"
-        />
-        <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
-          Email
-        </label>
-        <input
-          type="text"
-          className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-          name="email"
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
-        >
-          Send Message
-        </button>
-      </form>
+    <div>
+    <a name="contact"></a>
+    <div class="md:grid-cols-2 grid gap-4 bg-[#ffc3ae]">
       <div>
-        <img className='w-[80%] text-center' src={contactImg}/>
+        <div className="text-5xl ml-36 mt-6">Contact</div>
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-6 ml-36 mr-36 mt-6" mt-4 onSubmit={handleSubmit}>
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            Email Address
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            name="email"
+          />
+          <ValidationError
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            className="shadow appearance-none border rounded w-full py-24 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            name="message"
+          />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+          <button className="mt-6 bg-[#00bcff] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" disabled={state.submitting}>
+            Submit
+          </button>
+        </form>
+        <div className="w-full items-center py-6">
+          <div className="flex">
+            <CodeIcon className="h-8 text-[#4c82a7] px-2" /><a className="text-2xl" href="https://github.com/malwoodsantoro/">Github</a><br />
+          </div>
+          <div className="flex">
+            <UserIcon className="h-6 text-[#4c82a7] px-2" /><a className="text-2xl" href="https://www.linkedin.com/in/mal-wood-santoro/">Linkedin</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img className="w-full h-full object-cover" src={contactImg} />
       </div>
     </div>
-
+    </div>
   );
 }
+
+export default Contact;

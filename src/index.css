@@ -7,9 +7,5 @@
     @apply p-4
   }
 
-  button {
-    @apply text-white border bg-blue-500 border-blue-500
-    hover:bg-transparent hover:text-blue-500 rounded-md
-  }
 }
 
