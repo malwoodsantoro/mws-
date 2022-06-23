@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <div className="bg-white">
-      <h2 id="projects" className="scroll-mt-32 text-3xl font-bold mb-6 pt-6 md:pt-12 text-center">Projects</h2>
+      <h2 id="projects" className="md:scroll-mt-32 text-3xl font-bold mb-6 pt-6 md:pt-12 text-center">Projects</h2>
       <a href="#projects">
         <span aria-hidden="true" className="hidden">#</span>
         <span className="hidden">Section titled projects</span>
