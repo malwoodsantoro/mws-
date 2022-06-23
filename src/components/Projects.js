@@ -5,33 +5,34 @@ import a11yImg from "../assets/a11y.png"
 const Projects = () => {
 
   return (
-    <div>
-      <a name="projects"></a>
-      <div className="bg-white grid md:grid-cols-2 mt-[12%] mb-[12%] m-auto">
-        <div>
-          <img className="h-80 w-192 ml-auto rounded-md outline outline-offset-4 outline-blue-500 mr-24 self-end" src={mbxImg}></img>
+    <div className="bg-white">
+      <h2 id="projects" className="scroll-mt-32 text-3xl font-bold mb-6 pt-6 md:pt-12 text-center">Projects</h2>
+      <a href="#projects">
+        <span aria-hidden="true" className="hidden">#</span>
+        <span className="hidden">Section titled projects</span>
+      </a>
+      <div className="grid grid-cols-1 md:grid-cols-2 m-auto pt-12 pb-12">
+        <div className="object-scale-down w-[75%] md:w-[50%] md:justify-self-end">
+          <img className="md:ml-auto rounded-md md:mr-6 md:self-end mb-6" src={mbxImg} alt="Mapbox logo"></img>
         </div>
-        <div className="mr-96 text-2xl">
-          As a Frontend Engineer at <span className="text-4xl font-bold">Mapbox</span>, I work on maintaining and building upon our custom React component library, static site generator, and linting tools to empower product teams across the company to make contributions to technical documentation.
-          <br /><a href="" className="tracking-wider font-bold"> Visit website.</a>
+        <div className="md:mr-40 2xl:mr-96 xl:mr-60 mr-6 ml-2 md:text-1xl md:ml-6 text-left md:mb-24 mb-12">
+          As a Frontend Engineer at <span className="font-bold">Mapbox</span>, I work on maintaining and building all product documentation sites and systems by shipping performant and testable code. I build upon our documentation-specific React component library in addition to improving our testing and linting tools and static site generator. I participate in the design process by addressing user feedback, attending design critiques, and providing guidance and feedback informed by an understanding of technical constraints.
+          <br /><div className="pt-3"><a href="https://docs.mapbox.com/" className="tracking-wider font-bold text-[#566e8a]"> Visit website</a></div>
         </div>
-        <div className="my-12 ml-96 mr-12 text-3xl">
-          <span className="text-4xl font-bold">a11y-map-gl</span> is a project to provide a better experience for users with vision impairment or low vision who
-          encounter a web map and need to gather information from it using a screen reader. The direction the
-          user is moving is read aloud (i.e. “Moving North”) and then the list of POIs in the area are
-          announced.
-          <br /><a href="" className="tracking-wider font-bold"> View project.</a>
+        <div className="pl-6 s:mt-24 pb-4 md:mb-6 md:ml-40 xl:ml-60 2xl:ml-96 md:mr-6 mr-2 text-right">
+          <span className="font-bold">a11y-map-gl</span> is a project that uses the open source <a href="https://maplibre.org/">Maplibre project</a> to provide a better experience for users with vision impairment who
+          encounter a web map and need to gather information from it. Developers can pass in a string description to provide additional context about the map to be read aloud by screen readers. The direction (based on bearing) that the
+          user is moving is described (i.e. “Moving North”) and a list of places of interest in the area are queried and announced.
+          <br /><div className="pt-3"><a href="https://github.com/malwoodsantoro/a11y-map-gl/" className="tracking-wider font-bold pt-6 text-[#566e8a]"> View project</a></div>
         </div>
-        <div>
-          <img className="my-12 rounded-md outline outline-offset-2 outline-blue-500 content-start mr-auto w-192 h-80" src={a11yImg}></img>
+        <div className="md:w-full w-[85%] md:place-self-start place-self-end">
+          <div className="pt-4 object-scale-down md:mr-40 xl:mr-80 2xl:mr-96 mr-4 md:ml-6">
+            <img className="rounded-md md:mr-auto" src={a11yImg} alt="Accessibility mapping tool demonstrating ability to move directional keys to query for places of interest in the area."></img>
+          </div>
         </div>
-        <div>
-          <img className="ml-auto rounded-md outline outline-offset-2 outline-blue-500 mr-24 self-end" src={mbxImg}></img>
-        </div>
-        <div className="mr-36">
-          Learning projects
-          <br /><a href="" className="tracking-wider font-bold"> Visit website.</a>
-        </div>
+      </div>
+      <div className="text-center pb-12">
+        <a href="https://github.com/malwoodsantoro/" className="tracking-wider font-bold text-[#566e8a]"> Visit Github </a>for additional projects
       </div>
     </div>
   )
