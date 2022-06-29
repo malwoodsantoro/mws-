@@ -22,7 +22,7 @@ const Skills = () => {
             <div className="flex py-2 text-slate-500">TailwindCSS</div>
             <div className="flex py-2 text-slate-500">SASS</div>
             <div className="flex py-2 text-slate-500">Jest</div>
-            <div className="flex py-2 text-slate-500">REST</div>
+            <div className="flex py-2 text-slate-500">Git</div>
           </div>
         </div>
       </div>
