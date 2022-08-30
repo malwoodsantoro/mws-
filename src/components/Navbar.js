@@ -10,7 +10,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='w-screen h-[80px] z-10 bg-[#79afcc] fixed drop-shadow-lg'>
+    <div className='w-screen h-[80px] z-10 bg-[#d8973c] fixed drop-shadow-lg'>
       <div className='px-2 flex justify-end items-center w-full h-full'>
         <h1 className='content-left font-bold mr-auto sm:text-4xl'><img src={mwsImg} className="w-[40%] md:w-[20%]" alt="Mal Wood-Santoro logo"></img>
         </h1>
