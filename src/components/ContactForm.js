@@ -3,11 +3,11 @@ import { useForm, ValidationError } from '@formspree/react';
 import contactImg from "../assets/contact.png"
 var { SocialIcon } = require('react-social-icons');
 
-function Contact() {
+function ContactForm() {
   const [state, handleSubmit] = useForm("xzbowyrd");
 
   if (state.succeeded) {
-    return <p>I look forward to speaking with you!</p>;
+    return <p>Submitted</p>;
   }
 
   return (
@@ -24,7 +24,7 @@ function Contact() {
               Your email address:
             </label>
             <input
-              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight"
               id="email"
               type="email"
               name="email"
@@ -39,7 +39,7 @@ function Contact() {
             </label>
             <textarea
               id="message"
-              className="shadow appearance-none border rounded w-full pb-24 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full pb-24 px-3 pt-3 text-gray-700 leading-tight"
               name="message"
             />
             <ValidationError
@@ -47,7 +47,7 @@ function Contact() {
               field="message"
               errors={state.errors}
             />
-            <button className="mt-6 bg-[#273e47] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" disabled={state.submitting}>
+            <button className="mt-6 bg-[#273e47] text-white font-bold py-2 px-4 rounded" type="submit" disabled={state.submitting}>
               Submit
             </button>
           </form>
@@ -68,4 +68,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactForm;
