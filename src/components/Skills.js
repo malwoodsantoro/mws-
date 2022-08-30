@@ -3,7 +3,7 @@ import React from 'react';
 const Skills = () => {
   return (
     <div>
-      <div className='flex flex-row w-full justify-center bg-[#273e47]'>
+      <div className='flex flex-row w-full justify-center bg-[#273e47] pt-12 pb-12'>
         <div className="flex flex-col mt-12 mb-12 py-8 md:min-w-[70%] mx-3 px-6 bg-zinc-100 border border-slate-300 rounded-xl text-center shadow-xl">
           <h2 className="scroll-mt-2 md:scroll-mt-52 text-3xl font-bold mb-6">Skills</h2>
           <a href="#skills">

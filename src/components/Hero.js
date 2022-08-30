@@ -9,9 +9,9 @@ const Hero = () => {
   useState(true);
 
   return (
-    <div className='md:mb-[-2%] w-full h-screen bg-[#d8c99b] flex flex-col justify-between'>
+    <div className='md:mb-[-2%] w-full bg-[#d8c99b] flex flex-col justify-between'>
       <div className="grid md:grid-cols-2 max-w-[1240px] mt-[6%] m-auto">
-        <div className="flex flex-col items-center w-full md:px-24 text-center mt-24 md:mt-12 m:mt-2 ">
+        <div className="flex flex-col items-center w-full md:px-24 text-center mt-24 md:mt-12 m:mt-2  ">
           <RoughNotationGroup show={show}>
             <RoughNotation show={true} type="highlight" color="#ACB5B9" order={1} animationDuration={300}>
               <p className="py-3 text-4xl md:text-5xl font-bold">Mal</p>
@@ -26,8 +26,8 @@ const Hero = () => {
             <button className="mt-2 rounded-full content-center px-2 py-2 w-[25%] bg-gradient-to-r from-[#ACB5B9] to-[#79afcc] text-black mb-6"><a href="#contact">Connect</a></button>
           </RoughNotationGroup>
         </div>
-        <div className='flex flex-row md:place-self-start place-self-center bg-contain bg-[#d8c99b] w-[80%] md:mt-12'>
-          <img className='w-full rounded-sm' src={profileImg} alt="/" />
+        <div className='flex flex-row md:place-self-start content-center place-self-center bg-contain bg-[#d8c99b] md:mt-12 mb-[10%]'>
+          <img className='md:w-[90%] object-scale-down rounded-sm' src={profileImg} alt="/" />
         </div>
       </div>
       
