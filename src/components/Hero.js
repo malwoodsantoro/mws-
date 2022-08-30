@@ -22,11 +22,11 @@ const Hero = () => {
             <RoughNotation show={true} type="highlight" color="#4a7586" order={3} animationDuration={300}>
               <p className="py-3 text-4xl md:text-5xl font-bold">Santoro</p>
             </RoughNotation>
-            <p className="md:text-2xl py-3 px-6">I believe the internet can be a more <RoughNotation show={true} type="circle" color="#607999" order={4} animationDuration={500}>human</RoughNotation> place where people can connect, find value, and make meaning through thoughtfully built <RoughNotation show={true} type="underline" color="#607999" order={5} animationDuration={500}>accessible</RoughNotation> applications and websites. </p>
-            <button className="mt-2 rounded-full content-center px-2 py-2 w-[25%] bg-gradient-to-r from-[#ACB5B9] to-[#79afcc] text-black mb-6"><a href="#contact">Connect</a></button>
+            <p className="lg:text-2xl py-3 px-6">I believe the internet can be a more <RoughNotation show={true} type="circle" color="#607999" order={4} animationDuration={500}>human</RoughNotation> place where people can connect, find value, and make meaning through thoughtfully built <RoughNotation show={true} type="underline" color="#607999" order={5} animationDuration={500}>accessible</RoughNotation> applications and websites. </p>
+            <button className="mt-2 rounded-full content-center px-2 py-2 w-24 bg-gradient-to-r from-[#ACB5B9] to-[#79afcc] text-black mb-6"><a href="#contact">Connect</a></button>
           </RoughNotationGroup>
         </div>
-        <div className='flex flex-row md:place-self-start content-center place-self-center bg-contain bg-[#d8c99b] md:mt-12 mb-[10%]'>
+        <div className='flex flex-row md:place-self-start  bg-contain bg-[#d8c99b] md:mt-12 mb-[10%]'>
           <img className='md:w-[90%] object-scale-down rounded-sm' src={profileImg} alt="/" />
         </div>
       </div>
