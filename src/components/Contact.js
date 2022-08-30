@@ -5,9 +5,11 @@ var { SocialIcon } = require('react-social-icons');
 
 function Contact() {
   const [state, handleSubmit] = useForm("xzbowyrd");
+
   if (state.succeeded) {
     return <p>I look forward to speaking with you!</p>;
   }
+
   return (
     <div>
       <div className="md:grid-cols-2 grid bg-[#a4243b]">
@@ -17,12 +19,12 @@ function Contact() {
             <span aria-hidden="true" className="hidden">#</span>
             <span className="hidden">Section titled contact</span>
           </a>
-          <form className="bg-zinc-100 shadow-md rounded px-8 pt-6 pb-8 mb-6 mx-3 ml-6 mr-6 md:ml-12 md:mr-12 mt-6" mt-4 onSubmit={handleSubmit}>
+          <form className="bg-zinc-100 shadow-md rounded px-8 pt-6 pb-8 mb-6 mx-3 ml-6 mr-6 md:ml-12 md:mr-12 mt-6" onSubmit={handleSubmit}>
             <label className="block text-gray-700 text-sm font-bold mb-4" htmlFor="email">
               Your email address:
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               name="email"
@@ -37,7 +39,7 @@ function Contact() {
             </label>
             <textarea
               id="message"
-              className="shadow appearance-none border rounded w-full py-24 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full pb-24 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="message"
             />
             <ValidationError
