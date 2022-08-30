@@ -17,7 +17,7 @@ function Contact() {
             <span aria-hidden="true" className="hidden">#</span>
             <span className="hidden">Section titled contact</span>
           </a>
-          <form className="bg-zinc-100 shadow-md rounded px-8 pt-6 pb-8 mb-6 mx-3 ml-24 mr-24 md:ml-12 md:mr-12 mt-6" mt-4 onSubmit={handleSubmit}>
+          <form className="bg-zinc-100 shadow-md rounded px-8 pt-6 pb-8 mb-6 mx-3 ml-6 mr-6 md:ml-12 md:mr-12 mt-6" mt-4 onSubmit={handleSubmit}>
             <label className="block text-gray-700 text-sm font-bold mb-4" htmlFor="email">
               Your email address:
             </label>
